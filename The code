@@ -1,0 +1,22 @@
+import random 
+print("Hello, what is your name?")
+name = input()
+print("Well " + name + " I am thinking of a number between 1 and 20. Take a guess.")
+
+secretNumber = random.randint(1,20)
+
+for numberGuess in range (1,11):
+    guess = int(input())
+    if guess > secretNumber:
+        print("Your guess is too high. Take another guess.")
+    elif guess < secretNumber:
+        print("Your guess is too low. Take another guess")
+    else:
+        break
+    
+
+if guess == secretNumber:
+    print("Good job " + name +" !" + " you guessed my number in " + str(numberGuess) + " guesses!")
+else:
+    print("Nope! The number I was thinking of was " + str(secretNumber))
+
